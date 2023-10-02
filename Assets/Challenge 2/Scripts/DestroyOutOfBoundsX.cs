@@ -19,7 +19,7 @@ public class DestroyOutOfBoundsX : MonoBehaviour
         {
             Destroy(gameObject);
         } 
-        // Destroy balls if y position is less than bottomLimit
+        // Destroy balls if y position is less than bottomLimit and print Game Over message
         else if (transform.position.y < bottomLimit)
         {
             Destroy(gameObject);

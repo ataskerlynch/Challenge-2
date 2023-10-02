@@ -14,6 +14,7 @@ public class BallDropDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Move Game object down at defined speed
         transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 }

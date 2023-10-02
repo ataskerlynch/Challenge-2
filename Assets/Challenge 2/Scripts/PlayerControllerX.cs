@@ -18,7 +18,7 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // On spacebar press, send dog
+        // On spacebar press, send dog and initiate delay until another dog can be spawned
         if (Input.GetKeyDown(KeyCode.Space) && spawnEnabled==true)
         {
             spawnEnabled = false;
@@ -30,6 +30,7 @@ public class PlayerControllerX : MonoBehaviour
 
     public IEnumerator SpawnTimer()
     {
+        // Wait until spawnInterval has expired and then set flag to allow dogs to be spawned again
         yield return new WaitForSeconds(spawnInterval);
         spawnEnabled = true;
     }
